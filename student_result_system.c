@@ -59,7 +59,14 @@ int main()
                         for(j = 0; j < 5; j++)
                             printf("%d ", s[i].marks[j]);
                         printf("\nTotal: %d, Percentage: %.2f%%", s[i].total, s[i].percentage);
-                        printf("\nStatus: %s\n", (s[i].percentage >= 40) ? "Pass" : "Fail");
+                        if (s[i].percentage >= 40)
+                        {
+                         printf("\nStatus: Pass\n");
+                        }
+                        else
+                        {
+                         printf("\nStatus: Fail\n");
+                        }
                     }
                 }
                 break;
@@ -73,3 +80,4 @@ int main()
         }
     }
 }
+
